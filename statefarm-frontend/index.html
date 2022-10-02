@@ -28,7 +28,7 @@
 <header>
   <nav class="navbar navbar-expand-md sticky-top">
     <div class="container-fluid">
-        <a href="#" class="navbar-brand">
+        <a href="index.html" class="navbar-brand">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/State_Farm_logo.svg/2560px-State_Farm_logo.svg.png" width="150" alt="" class="d-inline-block align-middle mr-2">
           </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,21 +37,21 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav nav-pills me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Disability Insurance</a></li>
+              <li><a class="dropdown-item" href="disabilities.html">Disability Insurance</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Life Insurance</a></li>
+              <li><a class="dropdown-item" href="life.html">Life Insurance</a></li>
             </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Get a quote</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link">Talk to Agent</a>
+            <a class="nav-link" href="find-agent.html">Talk to Agent</a>
           </li>
         </ul>
         <div class="col-md-4 text-end">
@@ -339,7 +339,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
 <script>
   $(document).ready(function() {             
-  $('#myModal').modal('show');
+  // $('#myModal').modal('show');
+  $('#myModal').trigger('focus');
   $(function () {
       $('[data-toggle="tooltip"]').tooltip()
   })
