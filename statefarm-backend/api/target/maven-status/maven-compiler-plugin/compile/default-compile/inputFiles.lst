@@ -1,2 +1,9 @@
 C:\Users\rahul\Documents\HackUTA\statefarm-backend\api\src\main\java\com\statefarm\api\controller\HelloController.java
+C:\Users\rahul\Documents\HackUTA\statefarm-backend\api\src\main\java\com\statefarm\api\service\UserService.java
+C:\Users\rahul\Documents\HackUTA\statefarm-backend\api\src\main\java\com\statefarm\api\controller\UserController.java
+C:\Users\rahul\Documents\HackUTA\statefarm-backend\api\src\main\java\com\statefarm\api\repository\UserRepository.java
+C:\Users\rahul\Documents\HackUTA\statefarm-backend\api\src\main\java\com\statefarm\api\model\Users.java
+C:\Users\rahul\Documents\HackUTA\statefarm-backend\api\src\main\java\com\statefarm\api\repository\UsersRepository.java
 C:\Users\rahul\Documents\HackUTA\statefarm-backend\api\src\main\java\com\statefarm\api\ApiApplication.java
+C:\Users\rahul\Documents\HackUTA\statefarm-backend\api\src\main\java\com\statefarm\api\message\RegisterUserResponse.java
+C:\Users\rahul\Documents\HackUTA\statefarm-backend\api\src\main\java\com\statefarm\api\message\RegisterUserRequest.java
