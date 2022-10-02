@@ -88,8 +88,16 @@
 
                 <div class="col-lg-8 col-lg-offset-2">
 
-                    <h1>Find the nearest agent<a href=></a></h1>
-                    <p>
+                    <h1>Find the nearest agent</h1>
+                    
+                 <script>
+                  function httpGetAgent(theUrl) {
+                    let xmlHttpReq = new XMLHttpRequest();
+                    xmlHttpReq.open("GET", theUrl, false); 
+                    xmlHttpReq.send(null);
+                    return xmlHttpReq.responseText;
+                  }
+                 </script>
              
                 </div>
 

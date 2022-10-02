@@ -293,7 +293,9 @@
 
     <script>
     $(document).ready(function() {             
-    $('#myModal').modal('show');
+    // $('#myModal').modal('show');
+  $('#myModal').trigger('focus');
+
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
     })
