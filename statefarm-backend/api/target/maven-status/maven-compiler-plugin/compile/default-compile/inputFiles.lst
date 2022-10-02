@@ -1,2 +1,10 @@
-C:\Users\rahul\Documents\HackUTA\statefarm-backend\api\src\main\java\com\statefarm\api\controller\HelloController.java
-C:\Users\rahul\Documents\HackUTA\statefarm-backend\api\src\main\java\com\statefarm\api\ApiApplication.java
+/Users/sohmb/HackUTA/statefarm-backend/api/src/main/java/com/statefarm/api/controller/HelloController.java
+/Users/sohmb/HackUTA/statefarm-backend/api/src/main/java/com/statefarm/api/message/RegisterUserResponse.java
+/Users/sohmb/HackUTA/statefarm-backend/api/src/main/java/com/statefarm/api/service/UserService.java
+/Users/sohmb/HackUTA/statefarm-backend/api/src/main/java/com/statefarm/api/repository/UserRepository.java
+/Users/sohmb/HackUTA/statefarm-backend/api/src/main/java/com/statefarm/api/model/Agents.java
+/Users/sohmb/HackUTA/statefarm-backend/api/src/main/java/com/statefarm/api/repository/UsersRepository.java
+/Users/sohmb/HackUTA/statefarm-backend/api/src/main/java/com/statefarm/api/model/Users.java
+/Users/sohmb/HackUTA/statefarm-backend/api/src/main/java/com/statefarm/api/message/RegisterUserRequest.java
+/Users/sohmb/HackUTA/statefarm-backend/api/src/main/java/com/statefarm/api/ApiApplication.java
+/Users/sohmb/HackUTA/statefarm-backend/api/src/main/java/com/statefarm/api/controller/UserController.java
