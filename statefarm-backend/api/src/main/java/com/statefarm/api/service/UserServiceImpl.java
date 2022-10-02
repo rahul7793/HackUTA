@@ -59,10 +59,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	private double calculateQuote(UserDetails details) {
-<<<<<<< HEAD
-		double monthlyPlan = 0.0;
 
-=======
 		double monthlyPlan = details.getCoverageAmount()/(details.getCoverageTerm()*30);
 		double age = 1.5*(2022 - Integer.parseInt(details.getDob().substring(0,4)));
 		double sex = 0;
@@ -79,7 +76,6 @@ public class UserServiceImpl implements UserService {
 		if (details.getIsSmoker().equals("yes")) {
 			monthlyPlan+=3;
 		}
->>>>>>> 246d83540ca1fd391e33d7329ac2fd081cd27a43
 		return monthlyPlan;
 	}
 

@@ -342,16 +342,10 @@
 
                 <div class="col-lg-8 col-lg-offset-2">
 
-                    <h1>Find the nearest agent</h1>
-                    
-                 <script>
-                  function httpGetAgent(theUrl) {
-                    let xmlHttpReq = new XMLHttpRequest();
-                    xmlHttpReq.open("GET", theUrl, false); 
-                    xmlHttpReq.send(null);
-                    return xmlHttpReq.responseText;
-                  }
-                 </script>
+                    <h1>Find the nearest agent<a href=></a></h1>
+                    <input type="number" id="zip" class="form-control">
+                    <button type="button" onclick="getapi()" class="btn btn-outline-danger">Get Agents</button>
+                    <table id="agents"></table>
              
                 </div>
 
@@ -359,13 +353,13 @@
 
             <div id="map"></div>
             <div class="list">
-                <table class="table">
+                <table class="table" id="myTable">
                     <thead>
                       <tr>
                         <th scope="col">#</th>
                         <th scope="col">Agent Name</th>
                         <th scope="col">Contact</th>
-                        <th scope="col">Address</th>
+                        <!-- <th scope="col">Address</th> -->
                         <th scope="col">Email</th>
                       </tr>
                     </thead>
@@ -374,22 +368,8 @@
                         <th scope="row">1</th>
                         <td>Mark Otto</td>
                         <td>3142526728</td>
-                        <td> ARlington China</td>                        
+                        <!-- <td> ARlington China</td>                         -->
                         <td>mark123@gmail.com</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob Thornton</td>
-                        <td>7652735286</td>
-                        <td>Paragaue</td>
-                        <td>mar123@gmail.com</td>
-
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
                       </tr>
                     </tbody>
                   </table>
@@ -483,5 +463,49 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/mvc.js"></script>
 <script src="js/main.js"></script>
+<script>// Defining async function
+async function getapi() {
+  const url = 
+      "http://localhost:8080/getAgents";
+    var zip= document.getElementById("zip").value;
+    // Storing response
+    const response = await fetch(url+"/"+zip);
+    
+    // Storing data in form of JSON
+    var data = await response.json();
+    console.log(data);
+    if (response) {
+        // hideloader();
+        // alert("success");
+        show(data);
+    }
+}
+// Calling that async function
+
+getapi();
+  
+// Function to hide the loader
+
+// Function to define innerHTML for HTML table
+function show(data) {
+    // let tab = 
+    //     `<tr>
+    //       <th>Agent Name</th>
+    //       <th>Contact</th>
+    //       <th>Email</th>
+    //      </tr>`;
+    let tr = document.getElementById("myTable").getElementsByTagName('tbody')[0];
+    // Loop to access all rows 
+    for (let index = 0; index < data.list.length; index++) {
+      // console.log("r : "+r.email)
+        tr.insertRow().innerHTML = "<th scope='row'>" + (index + 2).toString()+ "</th>" + 
+        "<td>" +data.list[index].agentName + "</td>"+
+        "<td>" +data.list[index].phoneNumber+ "</td>"+
+        "<td>" +data.list[index].email+ "</td>";
+    }
+    // Setting innerHTML as tab variable
+    // document.getElementById("agents").innerHTML = tr;
+}
+                </script>
 </body>
 </html>
