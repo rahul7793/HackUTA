@@ -127,4 +127,18 @@ public class Users {
 		this.dateOfBirth = dateOfBirth;
 	}
 
+	public Users(String firstName, String lastName, String email, String phoneNumber, String claimNumber,
+			String userPassword, Date dateOfBirth) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.phoneNumber = phoneNumber;
+		this.claimNumber = claimNumber;
+		this.userPassword = userPassword;
+		this.dateOfBirth = dateOfBirth;
+	}
+	
+	
+
 }
