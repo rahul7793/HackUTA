@@ -132,6 +132,9 @@ body {
     margin-right: .75rem;
     margin-left: .75rem;
   }
+  .container .marketing{
+    margin: 100px 50px;
+  }
   /* rtl:end:ignore */
   
   
@@ -170,7 +173,5 @@ body {
     .featurette-heading {
       /* margin-top: 3rem; */
     }
-    .featurette .image{
-      margin: 70px;
-    }
+    
   }
