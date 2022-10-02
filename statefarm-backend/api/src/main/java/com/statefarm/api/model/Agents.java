@@ -21,10 +21,14 @@ public class Agents {
 	private String email;
 
 	@Column(name = "phone_number")
-	private Integer phoneNumber;
+	private String phoneNumber;
 
-	@Column(name = "agent_location")
-	private String agentLocation;
+	@Column(name = "longitude")
+	private String longitude;
+	
+	@Column(name = "latitude")
+	private String latitude;
+	
 
 	@Column(name = "zipcode")
 	private Integer zipcode;
@@ -56,20 +60,29 @@ public class Agents {
 		this.email = email;
 	}
 
-	public Integer getPhoneNumber() {
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
 
-	public void setPhoneNumber(Integer phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 
-	public String getAgentLocation() {
-		return agentLocation;
+
+	public String getLongitude() {
+		return longitude;
 	}
 
-	public void setAgentLocation(String agentLocation) {
-		this.agentLocation = agentLocation;
+	public void setLongitude(String longitude) {
+		this.longitude = longitude;
+	}
+
+	public String getLatitude() {
+		return latitude;
+	}
+
+	public void setLatitude(String latitude) {
+		this.latitude = latitude;
 	}
 
 	public Integer getZipcode() {
@@ -91,6 +104,9 @@ public class Agents {
 	@Override
 	public String toString() {
 		return "Agents [agent_id=" + agent_id + ", agentName=" + agentName + ", email=" + email + ", phoneNumber="
-				+ phoneNumber + ", agentLocation=" + agentLocation + ", zipcode=" + zipcode + ", photo=" + photo + "]";
+				+ phoneNumber + ", longitude=" + longitude + ", latitude=" + latitude + ", zipcode=" + zipcode
+				+ ", photo=" + photo + "]";
 	}
+
+	
 }
