@@ -14,7 +14,7 @@ import javax.persistence.Table;
 public class Users {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long user_id;
 
 	@Column(name = "first_name")
@@ -27,10 +27,10 @@ public class Users {
 	private String email;
 
 	@Column(name = "phone_number ")
-	private Integer phoneNumber;
+	private String phoneNumber;
 
 	@Column(name = "claim_number ")
-	private Integer claimNumber;
+	private String claimNumber;
 
 	@Column(name = "user_password ")
 	private String userPassword;
@@ -70,19 +70,19 @@ public class Users {
 		this.email = email;
 	}
 
-	public Integer getPhoneNumber() {
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
 
-	public void setPhoneNumber(Integer phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 
-	public Integer getClaimNumber() {
+	public String getClaimNumber() {
 		return claimNumber;
 	}
 
-	public void setClaimNumber(Integer claimNumber) {
+	public void setClaimNumber(String claimNumber) {
 		this.claimNumber = claimNumber;
 	}
 
@@ -114,8 +114,8 @@ public class Users {
 	public Users() {
 	}
 
-	public Users(long user_id, String firstName, String lastName, String email, Integer phoneNumber,
-			Integer claimNumber, String userPassword, Date dateOfBirth) {
+	public Users(long user_id, String firstName, String lastName, String email, String phoneNumber,
+			String claimNumber, String userPassword, Date dateOfBirth) {
 		super();
 		this.user_id = user_id;
 		this.firstName = firstName;
