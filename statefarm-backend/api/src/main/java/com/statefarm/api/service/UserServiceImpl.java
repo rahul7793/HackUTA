@@ -56,8 +56,22 @@ public class UserServiceImpl implements UserService{
 	}
 	
 	private double calculateQuote(UserDetails details) {
-		double monthlyPlan=0.0;
+		double monthlyPlan = details.getCoverageAmount()/(details.getCoverageTerm()*30);
+		double age = 1.5*(2022 - Integer.parseInt(details.getDob().substring(0,4)));
+		double sex = 0;
+		if (details.getSex().equals("F")) {
+			sex=0.15;
+		}
 		
+		double bmi = details.getWeight()*10000/(details.getHeight()*details.getHeight());
+		double idealBmi = 22.0;
+		bmi = Math.abs(bmi - idealBmi)/idealBmi;
+		double health = -0.5* Integer.parseInt(details.getHealth());
+		double bias = 6.40;
+		monthlyPlan = (monthlyPlan + age + sex + bmi + health + bias)/10;
+		if (details.getIsSmoker().equals("yes")) {
+			monthlyPlan+=3;
+		}
 		return monthlyPlan;
 	}
 	
