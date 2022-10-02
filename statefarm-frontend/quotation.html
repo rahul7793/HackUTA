@@ -48,84 +48,16 @@
       href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
     />
 
-    <style>
-      .navbar {
-        background-color: rgb(253, 245, 245);
-      }
-      .nav-pills .nav-link.active,
-      .nav-pills .show > .nav-link {
-        color: rgb(255, 255, 255);
-        background-color: #d62210;
-      }
-
-      .footer {
-        background-color: #f5f5f5;
-        bottom: 0;
-        height: 60px;
-      }
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-
-      .b-example-divider {
-        height: 3rem;
-        background-color: rgba(0, 0, 0, 0.1);
-        border: solid rgba(0, 0, 0, 0.15);
-        border-width: 1px 0;
-        box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
-          inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
-      }
-
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-
-      .bi {
-        vertical-align: -0.125em;
-        fill: currentColor;
-      }
-
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-    </style>
-
     <!-- Custom styles for this template -->
-    <link href="source/css/index.css" rel="stylesheet" />
+    <link href="source/css/quotation.css" rel="stylesheet" />
     <!-- <link href="source/css/login.css" rel='stylesheet' type='text/css'> -->
   </head>
 
   <body>
     <header>
-      <nav class="navbar navbar-expand-md fixed-top">
+      <nav class="navbar navbar-expand-md sticky-top">
         <div class="container-fluid">
-          <a href="#" class="navbar-brand">
+          <a href="index.html" class="navbar-brand">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/State_Farm_logo.svg/2560px-State_Farm_logo.svg.png"
               width="150"
@@ -147,7 +79,30 @@
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav nav-pills me-auto mb-2 mb-md-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle active"
+                  data-bs-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-expanded="false"
+                  >Insurance</a
+                >
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="disabilities.html"
+                      >Disability Insurance</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="life.html">Life Insurance</a>
+                  </li>
+                </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Get a quote</a>
@@ -165,7 +120,8 @@
               >
                 Login/SignUp
               </button>
-              <!-- <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#SignupModal">Sign-up</button> -->
+              <!-- <button type="button" class="btn btn-outline-danger me-2">Login</button>
+              <button type="button" class="btn btn-danger">Sign-up</button> -->
             </div>
           </div>
         </div>
@@ -392,12 +348,6 @@
         </div>
       </div>
 
-      <div>
-        shjfxa sbxkjbsaxk xsbkbxka
-        <p>svhschbxkjbc</p>
-        <p>svhschbxkjbc</p>
-      </div>
-
       <div class="quote-container">
         <ul class="nav nav-tabs">
           <li class="active text-danger">
@@ -516,7 +466,8 @@
 
     <script>
       $(document).ready(function () {
-        $("#myModal").modal("show");
+        // $("#myModal").modal("show");
+        $("#myModal").trigger("focus");
         $(function () {
           $('[data-toggle="tooltip"]').tooltip();
         });

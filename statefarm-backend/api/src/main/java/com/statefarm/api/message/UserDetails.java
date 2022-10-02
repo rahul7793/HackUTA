@@ -3,7 +3,7 @@ package com.statefarm.api.message;
 public class UserDetails {
 	String dob;
 	String sex;
-	boolean isSmoker;
+	String isSmoker;
 	int height;
 	int weight; 
 	long coverageAmount;
@@ -21,10 +21,11 @@ public class UserDetails {
 	public void setSex(String sex) {
 		this.sex = sex;
 	}
-	public boolean isSmoker() {
+	
+	public String getIsSmoker() {
 		return isSmoker;
 	}
-	public void setSmoker(boolean isSmoker) {
+	public void setIsSmoker(String isSmoker) {
 		this.isSmoker = isSmoker;
 	}
 	public int getHeight() {
