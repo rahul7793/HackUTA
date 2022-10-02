@@ -29,35 +29,45 @@
   </head>
 
 <body>
-<header>
-  <nav class="navbar navbar-expand-md fixed-top">
-    <div class="container-fluid">
-        <a href="#" class="navbar-brand">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/State_Farm_logo.svg/2560px-State_Farm_logo.svg.png" width="150" alt="" class="d-inline-block align-middle mr-2">
-          </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav nav-pills me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Get a quote</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="find-agent.html">Talk to Agent</a>
-          </li>
-        </ul>
-        <div class="col-md-4 text-end">
-            <button type="button" class="btn btn-outline-danger me-2" data-toggle="modal" data-target="#myModal">Login/SignUp</button>
-            <!-- <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#SignupModal">Sign-up</button> -->
+    <header>
+        <nav class="navbar navbar-expand-md sticky-top">
+          <div class="container-fluid">
+              <a href="index.html" class="navbar-brand">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/State_Farm_logo.svg/2560px-State_Farm_logo.svg.png" width="150" alt="" class="d-inline-block align-middle mr-2">
+                </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav nav-pills me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Insurance</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="disabilities.html">Disability Insurance</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="life.html">Life Insurance</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Get a quote</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="find-agent.html">Talk to Agent</a>
+                </li>
+              </ul>
+              <div class="col-md-4 text-end">
+                <button type="button" class="btn btn-outline-danger me-2" data-toggle="modal" data-target="#myModal">Login/SignUp</button>
+                <!-- <button type="button" class="btn btn-outline-danger me-2">Login</button>
+                <button type="button" class="btn btn-danger">Sign-up</button> -->
+                </div>
+            </div>
           </div>
-      </div>
-    </div>
-  </nav>
-</header>
+        </nav>
+        
+      </header>
 <main>
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
     aria-hidden="true">
