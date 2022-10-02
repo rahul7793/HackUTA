@@ -210,7 +210,7 @@
                       type="radio"
                       name="health"
                       id="fair"
-                      value="fair"
+                      value="1"
                     />
                     <label class="form-check-label" for="flexRadioDefault1">
                       Fair
@@ -222,7 +222,7 @@
                       type="radio"
                       name="health"
                       id="average"
-                      value="average"
+                      value="2"
                       checked
                     />
                     <label class="form-check-label" for="flexRadioDefault2">
@@ -234,7 +234,7 @@
                       class="form-check-input"
                       type="radio"
                       name="health"
-                      value="good"
+                      value="3"
                       id="good"
                     />
                     <label class="form-check-label" for="flexRadioDefault1">
@@ -246,7 +246,7 @@
                       class="form-check-input"
                       type="radio"
                       name="health"
-                      value="excellent"
+                      value="4"
                       id="excellent"
                       checked
                     />
@@ -445,7 +445,7 @@
         var weight = document.getElementById("weight").value;
 
         var health = document.getElementsByName("health");
-        var hlth = "yes";
+        var hlth = "1";
         for (i = 0; i < health.length; i++) {
           if (health[i].checked) hlth = health[i].value;
         }
