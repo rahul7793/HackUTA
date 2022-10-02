@@ -360,12 +360,8 @@
         <div class="tab-content">
           <div class="tab-pane active" id="monthlyQuote">
             <p>$13 per month</p>
-            <p>$13 per month</p>
-            <p>$13 per month</p>
           </div>
           <div class="tab-pane" id="anualQuote">
-            <p>$135 per month</p>
-            <p>$135 per month</p>
             <p>$135 per month</p>
           </div>
         </div>
@@ -522,7 +518,7 @@
         var email1 = document.getElementById("email1").value;
         var password1 = document.getElementById("exampleInputPassword1").value;
 
-        const response = await fetch("http://localhost:8080/getUserName", {
+        const response = await fetch("http://127.0.0.1:8080/getUserName", {
           method: "POST",
           headers: {
             Accept: "*/*",
@@ -537,7 +533,7 @@
         if (!response.ok) {
           throw new Error(`Error! status: ${response.status}`);
         } else {
-          location.href = "http://localhost:5501/statefarm-frontend/";
+          location.href = "http://127.0.0.1:5501/statefarm-frontend/";
         }
 
         await response.json().then((resp) => {

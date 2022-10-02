@@ -620,6 +620,42 @@
                   value="Previous"
                 />
               </fieldset>
+              <fieldset>
+                <div class="form-card">
+                  <div class="row">
+                    <div class="col-7">
+                      <h2 class="fs-title">Finish:</h2>
+                    </div>
+                    <div class="col-5">
+                      <!-- <h2 class="steps">Step 4 - 4</h2> -->
+                    </div>
+                  </div>
+                  <br /><br />
+                  <h2 class="purple-text text-center">
+                    <strong>AWESOME!!!</strong>
+                  </h2>
+                  <br />
+                  <div class="row justify-content-center">
+                    <div class="col-3">
+                      <div class="tab-pane active" id="monthlyQuote">
+                        <h1>$13 per month</h1>
+                      </div>
+                      <!-- <img
+                        src="https://i.imgur.com/GwStPmg.png"
+                        class="fit-image"
+                      /> -->
+                    </div>
+                  </div>
+                  <br /><br />
+                  <div class="row justify-content-center">
+                    <div class="col-7 text-center">
+                      <h5 class="purple-text text-center">
+                        is your Monthly Premium
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
             </form>
           </div>
         </div>
@@ -791,7 +827,7 @@
         e.preventDefault();
       });
 
-      function saveForm() {
+      async function saveForm() {
         var dob = document.getElementById("dobs").value;
 
         var sex = document.getElementsByName("sex");
@@ -829,22 +865,37 @@
         };
         console.log(card);
 
-        const response = fetch("https://reqbin.com/echo/post/json", {
+        const response = await fetch("http://127.0.0.1:8080/getQuote", {
           method: "POST",
           headers: {
-            Accept: "application/json",
+            Accept: "*/*",
             "Content-Type": "application/json",
           },
-          body: `{
-                  "Id": 78912,
-                  "Customer": "Jason Sweet",
-                  "Quantity": 1,
-                  "Price": 18.00
-                  }`,
+          body: JSON.stringify({
+            dob: dob,
+            sex: gender,
+            isSmoker: isSmoker,
+            height: height,
+            weight: weight,
+            health: hlth,
+            coverageAmount: coverage_amt,
+            coverageTerm: coverage_term,
+          }),
         });
 
+        if (!response.ok) {
+          throw new Error(`Error! status: ${response.status}`);
+        } else {
+          response.json().then((data) => {
+            document.getElementById("monthlyQuote").innerHTML =
+              "<h2>" +
+              Math.round((data.value + Number.EPSILON) * 100) / 100 +
+              "</h2>";
+          });
+        }
+
         response.json().then((data) => {
-          console.log(data);
+          console.log(data.value);
         });
       }
     </script>
