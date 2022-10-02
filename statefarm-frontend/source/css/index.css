@@ -3,6 +3,8 @@
 /* Padding below the footer and lighter body text */
 
 body {
+  /* padding-top: 3rem;
+  padding-bottom: 3rem; */
   color: #9c1515;
 }
 
@@ -170,4 +172,11 @@ text-align: center;
   .featurette-heading {
     margin-top: 7rem;
   }
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;            /* Footer height */
 }
