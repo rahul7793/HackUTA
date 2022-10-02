@@ -78,7 +78,7 @@
                   href="#"
                   role="button"
                   aria-expanded="false"
-                  >Dropdown</a
+                  >Insurance</a
                 >
                 <ul class="dropdown-menu">
                   <li>
@@ -114,6 +114,8 @@
           </div>
         </div>
       </nav>
+    </header>
+    <main>
       <div
         class="modal fade"
         id="myModal"
@@ -125,7 +127,7 @@
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title" id="myModalLabel">Login & SignUp Form</h4>
+              <h4 class="modal-title" id="myModalLabel">Login/Registration</h4>
               <button
                 type="button"
                 class="close"
@@ -143,69 +145,67 @@
                 >
                   <!-- Nav tabs -->
                   <ul class="nav nav-tabs">
-                    <li>
-                      <a
-                        class="text-danger active"
-                        href="#Login"
-                        data-toggle="tab"
-                        ><div style="font-size: 20px">Login/</div></a
+                    <li class="active text-danger">
+                      <a href="#Login" class="text-secondary" data-toggle="tab"
+                        >Login/</a
                       >
                     </li>
-                    <li>
+                    <li class="text-danger">
                       <a
-                        class="text-danger"
                         href="#Registration"
+                        class="text-secondary"
                         data-toggle="tab"
-                        ><div style="font-size: 20px">Registration</div></a
+                        >Registration</a
                       >
                     </li>
                   </ul>
                   <!-- Tab panes -->
                   <div class="tab-content">
                     <div class="tab-pane active" id="Login">
-                      <form role="form" class="form-horizontal">
-                        <div class="form-group">
-                          <label for="email" class="col-sm-2 control-label">
-                            Email</label
-                          >
-                          <div class="col-sm-10">
-                            <input
-                              type="email"
-                              class="form-control"
-                              id="email1"
-                              placeholder="Email"
-                            />
-                          </div>
+                      <!-- <form role="form" class="form-horizontal"> -->
+                      <div class="form-group">
+                        <label for="email" class="col-sm-2 control-label">
+                          Email</label
+                        >
+                        <div class="col-sm-10">
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="email1"
+                            placeholder="Email"
+                          />
                         </div>
-                        <div class="form-group">
-                          <label
-                            for="exampleInputPassword1"
-                            class="col-sm-2 control-label"
-                          >
-                            Password</label
-                          >
-                          <div class="col-sm-10">
-                            <input
-                              type="password"
-                              class="form-control"
-                              id="exampleInputPassword1"
-                              placeholder="Password"
-                            />
-                          </div>
+                      </div>
+                      <div class="form-group">
+                        <label
+                          for="exampleInputPassword1"
+                          class="col-sm-2 control-label"
+                        >
+                          Password</label
+                        >
+                        <div class="col-sm-10">
+                          <input
+                            type="password"
+                            class="form-control"
+                            id="exampleInputPassword1"
+                            placeholder="password"
+                          />
                         </div>
-                        <div class="row">
-                          <div class="col-sm-2"></div>
-                          <div class="col-sm-10">
-                            <button
-                              type="submit"
-                              class="btn btn-outline-danger me-2"
-                            >
-                              Submit
-                            </button>
-                            <!-- <a href="javascript:;">Forgot your password?</a> -->
-                          </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-10">
+                          <button
+                            type="submit"
+                            onclick="signin()"
+                            class="btn btn-outline-danger me-2"
+                          >
+                            Submit
+                          </button>
+                          <!-- <a href="javascript:;">Forgot your password?</a> -->
                         </div>
-                      </form>
+                      </div>
+                      <!-- </form> -->
                     </div>
                     <div class="tab-pane" id="Registration">
                       <form role="form" class="form-horizontal">
@@ -226,7 +226,18 @@
                                 <input
                                   type="text"
                                   class="form-control"
-                                  placeholder="Name"
+                                  placeholder="First Name"
+                                  name="firstname"
+                                  id="firstname2"
+                                />
+                              </div>
+                              <div class="col-md-9">
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  placeholder="Last Name"
+                                  name="lastname"
+                                  id="lastname2"
                                 />
                               </div>
                             </div>
@@ -240,7 +251,7 @@
                             <input
                               type="email"
                               class="form-control"
-                              id="email"
+                              id="email2"
                               placeholder="Email"
                             />
                           </div>
@@ -253,8 +264,21 @@
                             <input
                               type="tel"
                               class="form-control"
-                              id="mobile"
+                              id="mobile2"
                               placeholder="Mobile"
+                            />
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="claim" class="col-sm-4 control-label">
+                            Claim Number</label
+                          >
+                          <div class="col-sm-10">
+                            <input
+                              type="number"
+                              class="form-control"
+                              id="claimnumber"
+                              placeholder="Claim Number"
                             />
                           </div>
                         </div>
@@ -266,8 +290,21 @@
                             <input
                               type="password"
                               class="form-control"
-                              id="password"
+                              id="password2"
                               placeholder="Password"
+                            />
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="dob2" class="col-sm-3 control-label">
+                            Date of Birth</label
+                          >
+                          <div class="col-sm-10">
+                            <input
+                              type="date"
+                              class="form-control"
+                              id="dob2"
+                              placeholder="Date of Birth"
                             />
                           </div>
                         </div>
@@ -277,13 +314,13 @@
                             <button
                               type="button"
                               class="btn btn-outline-danger me-2"
-                              onclick="saveForm()"
+                              onclick="register()"
                             >
                               Save & Continue
                             </button>
                             <button
                               type="button"
-                              class="close btn btn-outline-danger me-2"
+                              class="btn btn-outline-danger me-2"
                             >
                               Cancel
                             </button>
@@ -298,8 +335,7 @@
           </div>
         </div>
       </div>
-    </header>
-    <main>
+
       <!-- Marketing messaging and featurettes
   ================================================== -->
       <!-- Wrap the rest of the page in another container to center all the content. -->
